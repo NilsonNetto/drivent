@@ -12,6 +12,6 @@ export const createPaymentSchema = Joi.object({
 
 });
 
-export const ticketIdParamsSchema = Joi.object({
+export const ticketIdQuerySchema = Joi.object({
   ticketId: Joi.number().integer().positive().required()
 });
