@@ -6,7 +6,7 @@ import ticketsRepository from "@/repositories/tickets-repository";
 import { Ticket } from "@prisma/client";
 
 async function postPayment(userId: number, paymentData: PaymentData) {
-  const ticket = await verifyTicket(userId);
+  const ticket = await verifyTicket(paymentData.ticketId);
 
   await verifyUserTicket(userId, ticket);
 
@@ -27,7 +27,7 @@ async function postPayment(userId: number, paymentData: PaymentData) {
     return;
   }
 
-  const updateTicket = await ticketsRepository.updateTicketStatusById(ticket.id);
+  await ticketsRepository.updateTicketStatusById(ticket.id);
 
   return insertedPayment;
 }
@@ -45,7 +45,7 @@ async function getPayment(userId: number, ticketId: number) {
 async function verifyTicket(ticketId: number) {
   const ticket = await ticketsRepository.findTicketById(ticketId);
 
-  if(!ticket.id) {
+  if(!ticket) {
     throw notFoundError();
   }
 
