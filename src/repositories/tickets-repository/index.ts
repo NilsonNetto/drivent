@@ -36,7 +36,10 @@ async function createTicket(enrollmentId: number, ticketTypeId: number) {
 async function updateTicketStatusById(ticketId: number) {
   return prisma.ticket.update({
     where: { id: ticketId },
-    data: { status: TicketStatus.PAID }
+    data: { 
+      status: TicketStatus.PAID,
+      updatedAt: new Date()
+    }
   });
 }
 
