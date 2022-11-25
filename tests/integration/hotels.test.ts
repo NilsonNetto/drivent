@@ -75,7 +75,7 @@ describe("GET /hotels", () => {
     });
 
     describe("when ticket is valid and paid", () => {
-      it("should respond with status 200 and empty array when is an online ticket", async () => {
+      it("should respond with status 403 when is an online ticket", async () => {
         const user = await createUser();
         const token = await generateValidToken(user);
         const enrollment = await createEnrollmentWithAddress(user);
@@ -85,11 +85,10 @@ describe("GET /hotels", () => {
   
         const response = await server.get("/hotels").set("Authorization", `Bearer ${token}`);
   
-        expect(response.status).toBe(httpStatus.OK);
-        expect(response.body).toEqual([]);
+        expect(response.status).toBe(httpStatus.FORBIDDEN);
       });
 
-      it("should respond with status 200 and empty array when is presential without hotel reservation", async () => {
+      it("should respond with status 403 when is presential without hotel reservation", async () => {
         const user = await createUser();
         const token = await generateValidToken(user);
         const enrollment = await createEnrollmentWithAddress(user);
@@ -99,8 +98,7 @@ describe("GET /hotels", () => {
   
         const response = await server.get("/hotels").set("Authorization", `Bearer ${token}`);
   
-        expect(response.status).toBe(httpStatus.OK);
-        expect(response.body).toEqual([]);
+        expect(response.status).toBe(httpStatus.FORBIDDEN);
       });
       
       it("should respond with status 200 and empty array when there are no hotels created", async () => {
@@ -198,7 +196,7 @@ describe("GET /hotels/:hotelId", () => {
     });
 
     describe("when ticket is valid and paid", () => {
-      it("should respond with status 200 and empty array when is an online ticket", async () => {
+      it("should respond with status 403 when is an online ticket", async () => {
         const user = await createUser();
         const token = await generateValidToken(user);
         const enrollment = await createEnrollmentWithAddress(user);
@@ -208,11 +206,10 @@ describe("GET /hotels/:hotelId", () => {
   
         const response = await server.get("/hotels/1").set("Authorization", `Bearer ${token}`);
   
-        expect(response.status).toBe(httpStatus.OK);
-        expect(response.body).toEqual([]);
+        expect(response.status).toBe(httpStatus.FORBIDDEN);
       });
 
-      it("should respond with status 200 and empty array when is presential without hotel reservation", async () => {
+      it("should respond with status 403 when is presential without hotel reservation", async () => {
         const user = await createUser();
         const token = await generateValidToken(user);
         const enrollment = await createEnrollmentWithAddress(user);
@@ -222,8 +219,7 @@ describe("GET /hotels/:hotelId", () => {
   
         const response = await server.get("/hotels/1").set("Authorization", `Bearer ${token}`);
   
-        expect(response.status).toBe(httpStatus.OK);
-        expect(response.body).toEqual([]);
+        expect(response.status).toBe(httpStatus.FORBIDDEN);
       });
       
       it("should respond with status 404 when hotelId doesnt exists", async () => {
