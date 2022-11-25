@@ -4,7 +4,8 @@ import { TicketStatus } from "@prisma/client";
 import httpStatus from "http-status";
 import * as jwt from "jsonwebtoken";
 import supertest from "supertest";
-import { createUser, createTicketType, createEnrollmentWithAddress, createTicket, createPayment } from "../factories";
+import { createUser, createTicketType, createEnrollmentWithAddress, createTicket, createPayment, createTicketTypeWithParams } from "../factories";
+import { createHotel } from "../factories/hotels-factory";
 import { cleanDb, generateValidToken } from "../helpers";
 
 beforeAll(async () => {
@@ -78,9 +79,9 @@ describe("GET /hotels", () => {
         const user = await createUser();
         const token = await generateValidToken(user);
         const enrollment = await createEnrollmentWithAddress(user);
-        const ticketType = await createTicketType();
+        const ticketType = await createTicketTypeWithParams(true, false);
         const ticket = await createTicket(enrollment.id, ticketType.id, TicketStatus.PAID);
-        const payment = await createPayment(ticket.id, ticketType.price);
+        await createPayment(ticket.id, ticketType.price);
   
         const response = await server.get("/hotels").set("Authorization", `Bearer ${token}`);
   
@@ -88,17 +89,54 @@ describe("GET /hotels", () => {
         expect(response.body).toEqual([]);
       });
 
-      /*it("should respond with status 200 and empty array when is presential without hotel reservation", async () => {
-
+      it("should respond with status 200 and empty array when is presential without hotel reservation", async () => {
+        const user = await createUser();
+        const token = await generateValidToken(user);
+        const enrollment = await createEnrollmentWithAddress(user);
+        const ticketType = await createTicketTypeWithParams(false, false);
+        const ticket = await createTicket(enrollment.id, ticketType.id, TicketStatus.PAID);
+        await createPayment(ticket.id, ticketType.price);
+  
+        const response = await server.get("/hotels").set("Authorization", `Bearer ${token}`);
+  
+        expect(response.status).toBe(httpStatus.OK);
+        expect(response.body).toEqual([]);
       });
-
+      
       it("should respond with status 200 and empty array when there are no hotels created", async () => {
-
+        const user = await createUser();
+        const token = await generateValidToken(user);
+        const enrollment = await createEnrollmentWithAddress(user);
+        const ticketType = await createTicketTypeWithParams(false, true);
+        const ticket = await createTicket(enrollment.id, ticketType.id, TicketStatus.PAID);
+        await createPayment(ticket.id, ticketType.price);
+  
+        const response = await server.get("/hotels").set("Authorization", `Bearer ${token}`);
+  
+        expect(response.status).toBe(httpStatus.OK);
+        expect(response.body).toEqual([]);
       });
 
       it("should respond with status 200 and existing hotels when is presential with hotel reservation", async () => {
-
-      }); */
+        const user = await createUser();
+        const token = await generateValidToken(user);
+        const enrollment = await createEnrollmentWithAddress(user);
+        const ticketType = await createTicketTypeWithParams(false, true);
+        const ticket = await createTicket(enrollment.id, ticketType.id, TicketStatus.PAID);
+        await createPayment(ticket.id, ticketType.price);
+        const hotel = await createHotel();
+  
+        const response = await server.get("/hotels").set("Authorization", `Bearer ${token}`);
+  
+        expect(response.status).toEqual(httpStatus.OK);
+        expect(response.body).toEqual([{
+          id: expect.any(Number),
+          name: hotel.name,
+          image: hotel.image,
+          createdAt: expect.any(String),
+          updatedAt: expect.any(String),
+        }]);
+      });
     });
   });
 });
