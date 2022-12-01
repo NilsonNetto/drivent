@@ -1,5 +1,4 @@
-import { notFoundError } from "@/errors";
-import { forbiddenError } from "@/errors/forbidden-error";
+import { notFoundError, forbiddenError } from "@/errors";
 import bookingRepository, { NewBooking } from "@/repositories/booking-repository";
 import enrollmentRepository from "@/repositories/enrollment-repository";
 import ticketsRepository from "@/repositories/tickets-repository";
