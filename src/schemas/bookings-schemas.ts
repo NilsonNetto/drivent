@@ -1,5 +1,9 @@
 import Joi from "joi";
 
-export const createBookingSchema = Joi.object<{roomId: number}>({
+export const roomIdSchema = Joi.object<{roomId: number}>({
   roomId: Joi.number().integer().positive().required()
+});
+
+export const bookingIdSchema = Joi.object<{bookingId: number}>({
+  bookingId: Joi.number().integer().positive().required()
 });

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1669811371604" clover="3.2.0">
-  <project timestamp="1669811371604" name="All files">
-    <metrics statements="555" coveredstatements="519" conditionals="65" coveredconditionals="43" methods="93" coveredmethods="85" elements="713" coveredelements="647" complexity="0" loc="555" ncloc="555" packages="24" files="62" classes="62"/>
+<coverage generated="1669916761676" clover="3.2.0">
+  <project timestamp="1669916761677" name="All files">
+    <metrics statements="649" coveredstatements="549" conditionals="81" coveredconditionals="43" methods="107" coveredmethods="86" elements="837" coveredelements="678" complexity="0" loc="649" ncloc="649" packages="26" files="67" classes="67"/>
     <package name="src">
       <metrics statements="22" coveredstatements="16" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="2"/>
       <file name="app.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/app.ts">
@@ -14,15 +14,15 @@
         <line num="8" count="10" type="stmt"/>
         <line num="10" count="10" type="stmt"/>
         <line num="11" count="10" type="stmt"/>
-        <line num="19" count="10" type="stmt"/>
         <line num="20" count="10" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="33" count="10" type="stmt"/>
-        <line num="34" count="10" type="stmt"/>
+        <line num="21" count="10" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
         <line num="35" count="10" type="stmt"/>
-        <line num="38" count="10" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="42" count="10" type="stmt"/>
+        <line num="36" count="10" type="stmt"/>
+        <line num="37" count="10" type="stmt"/>
+        <line num="40" count="10" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="44" count="10" type="stmt"/>
       </file>
       <file name="server.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/server.ts">
         <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
@@ -59,7 +59,7 @@
       </file>
     </package>
     <package name="src.controllers">
-      <metrics statements="121" coveredstatements="118" conditionals="13" coveredconditionals="12" methods="13" coveredmethods="13"/>
+      <metrics statements="149" coveredstatements="124" conditionals="15" coveredconditionals="12" methods="16" coveredmethods="13"/>
       <file name="authentication-controller.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/controllers/authentication-controller.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="10" type="stmt"/>
@@ -70,6 +70,36 @@
         <line num="8" count="5" type="stmt"/>
         <line num="10" count="3" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
+      </file>
+      <file name="bookings-controller.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/controllers/bookings-controller.ts">
+        <metrics statements="27" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="34" count="10" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="44" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
       </file>
       <file name="enrollments-controller.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/controllers/enrollments-controller.ts">
         <metrics statements="20" coveredstatements="19" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
@@ -137,7 +167,7 @@
         <line num="49" count="2" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/controllers/index.ts">
-        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="10" type="stmt"/>
         <line num="2" count="10" type="stmt"/>
         <line num="3" count="10" type="stmt"/>
@@ -145,6 +175,7 @@
         <line num="5" count="10" type="stmt"/>
         <line num="6" count="10" type="stmt"/>
         <line num="7" count="10" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
       </file>
       <file name="payments-controller.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/controllers/payments-controller.ts">
         <metrics statements="20" coveredstatements="20" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
@@ -265,7 +296,7 @@
       </file>
     </package>
     <package name="src.middlewares">
-      <metrics statements="47" coveredstatements="34" conditionals="12" coveredconditionals="4" methods="9" coveredmethods="7"/>
+      <metrics statements="47" coveredstatements="35" conditionals="12" coveredconditionals="4" methods="9" coveredmethods="8"/>
       <file name="authentication-middleware.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/middlewares/authentication-middleware.ts">
         <metrics statements="17" coveredstatements="17" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="2" count="10" type="stmt"/>
@@ -310,16 +341,16 @@
         <line num="3" count="10" type="stmt"/>
       </file>
       <file name="validation-middleware.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/middlewares/validation-middleware.ts">
-        <metrics statements="13" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="5"/>
+        <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
         <line num="1" count="10" type="stmt"/>
         <line num="3" count="10" type="stmt"/>
         <line num="6" count="10" type="stmt"/>
-        <line num="7" count="50" type="stmt"/>
+        <line num="7" count="70" type="stmt"/>
         <line num="10" count="10" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <line num="11" count="10" type="stmt"/>
         <line num="14" count="10" type="stmt"/>
         <line num="15" count="10" type="stmt"/>
-        <line num="19" count="60" type="stmt"/>
+        <line num="19" count="90" type="stmt"/>
         <line num="20" count="35" type="stmt"/>
         <line num="24" count="35" type="cond" truecount="2" falsecount="0"/>
         <line num="25" count="24" type="stmt"/>
@@ -334,6 +365,21 @@
         <line num="5" count="2" type="stmt"/>
         <line num="20" count="10" type="stmt"/>
         <line num="24" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.repositories.booking-repository">
+      <metrics statements="9" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="index.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/repositories/booking-repository/index.ts">
+        <metrics statements="9" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="48" count="10" type="stmt"/>
+        <line num="57" count="10" type="stmt"/>
       </file>
     </package>
     <package name="src.repositories.enrollment-repository">
@@ -421,7 +467,7 @@
       </file>
     </package>
     <package name="src.routers">
-      <metrics statements="53" coveredstatements="53" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="61" coveredstatements="61" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="authentication-router.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/routers/authentication-router.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="10" type="stmt"/>
@@ -431,6 +477,16 @@
         <line num="6" count="10" type="stmt"/>
         <line num="8" count="10" type="stmt"/>
         <line num="10" count="10" type="stmt"/>
+      </file>
+      <file name="bookings-router.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/routers/bookings-router.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="14" count="10" type="stmt"/>
       </file>
       <file name="enrollments-router.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/routers/enrollments-router.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -460,7 +516,7 @@
         <line num="12" count="10" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/routers/index.ts">
-        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="10" type="stmt"/>
         <line num="2" count="10" type="stmt"/>
         <line num="3" count="10" type="stmt"/>
@@ -468,6 +524,7 @@
         <line num="5" count="10" type="stmt"/>
         <line num="6" count="10" type="stmt"/>
         <line num="7" count="10" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
       </file>
       <file name="payments-router.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/routers/payments-router.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -501,11 +558,17 @@
       </file>
     </package>
     <package name="src.schemas">
-      <metrics statements="32" coveredstatements="31" conditionals="6" coveredconditionals="2" methods="4" coveredmethods="4"/>
+      <metrics statements="36" coveredstatements="35" conditionals="6" coveredconditionals="2" methods="4" coveredmethods="4"/>
       <file name="authentication-schemas.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/schemas/authentication-schemas.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="2" count="13" type="stmt"/>
         <line num="4" count="13" type="stmt"/>
+      </file>
+      <file name="bookings-schemas.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/schemas/bookings-schemas.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="13" type="stmt"/>
+        <line num="3" count="13" type="stmt"/>
+        <line num="7" count="13" type="stmt"/>
       </file>
       <file name="enrollments-schemas.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/schemas/enrollments-schemas.ts">
         <metrics statements="19" coveredstatements="18" conditionals="6" coveredconditionals="2" methods="4" coveredmethods="4"/>
@@ -530,11 +593,12 @@
         <line num="57" count="23" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/schemas/index.ts">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="13" type="stmt"/>
         <line num="2" count="13" type="stmt"/>
         <line num="3" count="13" type="stmt"/>
         <line num="4" count="13" type="stmt"/>
+        <line num="5" count="13" type="stmt"/>
       </file>
       <file name="payments-schemas.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/schemas/payments-schemas.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -554,9 +618,9 @@
       </file>
     </package>
     <package name="src.services">
-      <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/services/index.ts">
-        <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -564,6 +628,7 @@
         <line num="5" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.services.authentication-service">
@@ -597,6 +662,56 @@
         <line num="55" count="10" type="stmt"/>
         <line num="59" count="10" type="stmt"/>
         <line num="60" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services.bookings-service">
+      <metrics statements="44" coveredstatements="8" conditionals="14" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <file name="index.ts" path="/home/nilsonnetto/Desktop/Driven/calvs-drivent/src/services/bookings-service/index.ts">
+        <metrics statements="44" coveredstatements="8" conditionals="14" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="42" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="46" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="60" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="66" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="70" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="74" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="82" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="88" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="93" count="10" type="stmt"/>
+        <line num="99" count="10" type="stmt"/>
       </file>
     </package>
     <package name="src.services.enrollments-service">
