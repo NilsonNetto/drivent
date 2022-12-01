@@ -22,11 +22,11 @@ export async function postNewBooking(req: AuthenticatedRequest, res: Response) {
   try {
     const newBooking = await bookingsService.postNewBooking(userId, roomId);
 
-    return res.status(httpStatus.OK).send(newBooking);
+    return res.status(httpStatus.OK).send(newBooking.id);
   } catch (error) {
     if(error.name === "ForbiddenError") {
       return res.status(httpStatus.FORBIDDEN).send(error.message);
     }
-    return res.status(httpStatus.NOT_FOUND).send(error);
+    return res.status(httpStatus.NOT_FOUND).send(error.message);
   }
 }
