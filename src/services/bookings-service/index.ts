@@ -16,14 +16,14 @@ async function getUserBooking(userId: number) {
 
 async function postNewBooking(userId: number, roomId: number) {
   await verifyTicket(userId);
-  
-  await verifyRoom(roomId);
 
   const verifyUserBooking = await bookingRepository.findBookingByUserId(userId);
 
   if(verifyUserBooking) {
     throw forbiddenError();
   }
+
+  await verifyRoom(roomId);
 
   const newBookingData: NewBooking = {
     userId,
