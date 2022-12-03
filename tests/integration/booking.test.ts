@@ -234,6 +234,9 @@ describe("POST /booking", () => {
       it("should respond with status 403 if user already has a booking", async () => {
         const user = await createUser();
         const token = await generateValidToken(user);
+        const enrollment = await createEnrollmentWithAddress(user);
+        const ticketType = await createTicketTypeWithParams(false, true);
+        await createTicket(enrollment.id, ticketType.id, TicketStatus.PAID);
         const hotel = await createHotel();
         const room = await createRoom(hotel.id, 3);
         await createBooking(user.id, room.id); 
@@ -244,9 +247,7 @@ describe("POST /booking", () => {
   
         expect(response.status).toBe(httpStatus.FORBIDDEN);
       });
-    });
 
-    describe("when user can make a booking", () => {
       it("should respond with status 404 if given roomId doesnt exist", async () => {
         const user = await createUser();
         const token = await generateValidToken(user);
@@ -280,7 +281,9 @@ describe("POST /booking", () => {
   
         expect(response.status).toBe(httpStatus.FORBIDDEN);
       });
+    });
 
+    describe("when user can make a booking", () => {
       it("should respond with status 200 and with booking data", async () => {
         const user = await createUser();
         const token = await generateValidToken(user);
@@ -442,9 +445,7 @@ describe("PUT /booking/:bookingId", () => {
   
         expect(response.status).toBe(httpStatus.FORBIDDEN);
       });
-    });
 
-    describe("when user is allowed to update a booking", () => {
       it("should respond with status 404 if trying to update booking to an roomId that doesnt exist", async () => {
         const user = await createUser();
         const token = await generateValidToken(user);
@@ -476,7 +477,9 @@ describe("PUT /booking/:bookingId", () => {
   
         expect(response.status).toBe(httpStatus.FORBIDDEN);
       });
+    });
 
+    describe("when user is allowed to update a booking", () => {
       it("should respond with status 200 and with new booking data", async () => {
         const user = await createUser();
         const token = await generateValidToken(user);
