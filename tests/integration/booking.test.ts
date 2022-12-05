@@ -215,22 +215,6 @@ describe("POST /booking", () => {
         expect(response.status).toBe(httpStatus.FORBIDDEN);
       });
   
-      it("should respond with status 403 if user have an unpaid ticket", async () => {
-        const user = await createUser();
-        const token = await generateValidToken(user);
-        const enrollment = await createEnrollmentWithAddress(user);
-        const ticketType = await createTicketTypeWithParams(false, true);
-        await createTicket(enrollment.id, ticketType.id, TicketStatus.RESERVED);
-        const hotel = await createHotel();
-        const room = await createRoom(hotel.id, 3);
-  
-        const body = { roomId: room.id };
-
-        const response = await server.post("/booking").set("Authorization", `Bearer ${token}`).send(body);
-  
-        expect(response.status).toBe(httpStatus.FORBIDDEN);
-      });
-
       it("should respond with status 403 if user already has a booking", async () => {
         const user = await createUser();
         const token = await generateValidToken(user);
